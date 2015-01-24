@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/**
+ * Utility: Wrapper
+ * --------------------------------------------------
+ */
+
+.u-wrapper {
+  @include clearfix();
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 860px;
+
+  @include mq(above, phablet) {
+    padding: 0 30px;
+  }
+}

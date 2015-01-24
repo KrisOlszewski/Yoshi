@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/**
+ * Core: Typography
+ * --------------------------------------------------
+ */
+
+/* HTML */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Body */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Paragraphs */
+
+p {
+  margin: 0;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}

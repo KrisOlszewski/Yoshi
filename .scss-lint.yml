@@ -1,0 +1,36 @@
+scss_files: "**/*.scss"
+
+linters:
+  StringQuotes:
+    enabled: true
+    style: double_quotes
+
+  NestingDepth:
+    enabled: false
+
+  EmptyRule:
+    enabled: false
+
+  ColorKeyword:
+    enabled: false
+
+  DuplicateProperty:
+    enabled: false
+
+  SelectorFormat:
+    enabled: false
+
+  NameFormat:
+    enabled: false
+
+  LeadingZero:
+    enabled: false
+
+  Comment:
+    enabled: false
+
+  PropertySortOrder:
+    enabled: false
+
+  VendorPrefixes:
+    enabled: false

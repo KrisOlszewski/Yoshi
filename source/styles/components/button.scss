@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+////
+/// @group Component: Button
+/// @author Kris Olszewski
+////
+
+/// Button: Base
+$button-base: (
+  font-size         : 14px,
+  line-height       : 20px,
+  height            : 34px,
+  padding           : 6px 12px,
+  border-radius     : 3px,
+  text              : #fff,
+  background        : #967adc,
+  border            : #967adc,
+  active-text       : #fff,
+  active-background : #ac92ec,
+  active-border     : #ac92ec
+);
+
+/// Button: Actions
+$button-actions: (
+  broken: (
+    text              : #fff,
+    background        : #da4453,
+    border            : #da4453,
+    active-text       : #fff,
+    active-background : #ed5565,
+    active-border     : #ed5565
+  )
+);
+
+/// Get action properties from `$button-actions`
+///
+/// @author Kris Olszewski
+/// @param {String} $action - Action
+/// @param {String} $property - Property
+/// @returns {String} $value - Property value
+
+@function get-button-action($action, $property) {
+  @return map-get(map-get($button-actions, $action), $property);
+}
+
+/// Generate `Button` action modifiers
+///
+/// @author Kris Olszewski
+
+@mixin generate-button-action-modifiers() {
+  @each $action, $values in $button-actions {
+
+    .Button--#{$action} {
+      background-color: get-button-action($action, background);
+      border-color: get-button-action($action, border);
+      color: get-button-action($action, text);
+
+      &:hover {
+        background-color: get-button-action($action, active-background);
+        border-color: get-button-action($action, active-border);
+        color: get-button-action($action, active-text);
+      }
+    }
+
+  }
+}
+
+/**
+ * Component: Button
+ * --------------------------------------------------
+ */
+
+.Button {
+  background: map-get($button-base, background);
+  border: 1px solid map-get($button-base, border);
+  border-radius: map-get($button-base, border-radius);
+  color: map-get($button-base, text);
+  cursor: pointer;
+  display: inline-block;
+  font-size: map-get($button-base, font-size);
+  height: map-get($button-base, height);
+  line-height: map-get($button-base, line-height);
+  padding: map-get($button-base, padding);
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .25s ease, border-color .25s ease, color .25s ease;
+  user-select: none;
+  white-space: normal;
+  vertical-align: middle;
+  -webkit-appearance: none;
+
+  &:hover {
+    background-color: map-get($button-base, active-background);
+    border-color: map-get($button-base, active-border);
+    color: map-get($button-base, active-color);
+  }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    margin: 0;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .65;
+  }
+}
+
+/**
+ * Component: Button
+ * Modifier: Action
+ * --------------------------------------------------
+ */
+
+@include generate-button-action-modifiers();

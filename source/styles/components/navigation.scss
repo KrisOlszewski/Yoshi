@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/**
+ * Component: Navigation
+ * --------------------------------------------------
+ */
+
+.Navigation {
+  float: right;
+}
+
+.Navigation-list {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Navigation-item {
+  float: left;
+  margin-left: 20px;
+
+  @include mq(above, phablet) {
+    margin-left: 10px;
+  }
+}
+
+.Navigation-link {
+  display: block;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 5px 0;
+  color: #fff;
+  transition: box-shadow .25s ease;
+
+  @include mq(above, phablet) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &.is-active,
+  &:hover {
+    box-shadow: 0 1px 0 0 #fff;
+  }
+}
+

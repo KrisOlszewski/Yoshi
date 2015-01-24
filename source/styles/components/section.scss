@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/**
+ * Component: Section
+ * --------------------------------------------------
+ */
+
+.Section {
+  display: none;
+  position: relative;
+  z-index: 5;
+
+  .u-table {
+    position: relative;
+    z-index: 10;
+  }
+
+  .u-cell {
+    padding: 100px 0;
+  }
+}
+
+.Section--welcome {
+
+}
+
+.Section--general {
+
+}
+
+.Section--notFound {
+
+}

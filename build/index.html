@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Yoshi - Not MVC, but still cool.</title>
+  <meta name="description" content="Not MVC, but still cool.">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet">
+  <link href="styles/yoshi.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <header class="Header" role="banner">
+    <div class="u-wrapper">
+      <a href="#!welcome" class="Logo">Yoshi</a>
+      <nav class="Navigation" role="navigation">
+        <ul class="Navigation-list">
+          <li class="Navigation-item">
+            <a href="#!welcome" data-href="welcome" class="Navigation-link">Welcome</a>
+          </li>
+          <li class="Navigation-item">
+            <a href="#!general" data-href="general" class="Navigation-link">General</a>
+          </li>
+          <li class="Navigation-item">
+            <a href="#!missing" data-href="fuck-you" class="Navigation-link">Missing</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js"></script>
+  <script src="scripts/yoshi.min.js"></script>
+  <script>
+    /**
+     * Initialize script
+     */
+
+    Yoshi.init({
+      container     : 'body', // DOM element whene sections will be prepended
+      withBang      : true, // '#' vs '#!' for SEO purposes
+      pageExt       : '.html', // Extension of files requested via Ajax
+      transitionIn  : 'transition.slideDownBigIn', // Velocity UI transition
+      transitionOut : 'transition.slideUpBigOut', // Velocity UI transition
+      defaultView   : 'welcome', // Default file view name
+      missingView   : 'not-found', // Missing file view name
+      activeNav     : 'is-active' // Navigation active UI state
+    });
+  </script>
+</body>
+</html>

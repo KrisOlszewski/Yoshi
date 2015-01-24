@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/**
+ * Component: Logo
+ * --------------------------------------------------
+ */
+
+.Logo {
+  float: left;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 5px 0;
+  color: #fff;
+
+  @include mq(above, phablet) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}

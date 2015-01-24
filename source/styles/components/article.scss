@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/**
+ * Component: Article
+ * --------------------------------------------------
+ */
+
+.Article {
+  position: relative;
+}
+
+.Article-title {
+  font-size: 60px;
+  line-height: 60px;
+  margin: 0 0 30px;
+  font-weight: 300;
+  color: #967adc;
+}
+
+.Article-subtitle {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0 0 20px;
+  font-weight: 300;
+  color: #967adc;
+}
+
+.Article-intro {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0 0 20px;
+  color: #656d78;
+}
+
+.Article-text {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 20px;
+  color: #656d78;
+}

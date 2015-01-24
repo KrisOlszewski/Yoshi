@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/**
+ * Utility: Table
+ * --------------------------------------------------
+ */
+
+.u-table {
+  width: 100%;
+  display: table;
+}
+
+.u-cell {
+  display: table-cell;
+  vertical-align: middle;
+}

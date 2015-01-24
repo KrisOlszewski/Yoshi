@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+////
+/// @group Globals
+////
+
+/// Add clearfix hack to element with floating children nodes.
+///
+/// @author Nicolas Gallagher
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/
+///
+/// @example scss - Usage
+///   .element {
+///     @include clearfix();
+///   }
+/// @example css - CSS Output
+///   .element:before,
+///   .element:after {
+///     content: " ";
+///     display: table;
+///   }
+///   .element:after {
+///     clear: both;
+///   }
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+} // clearfix()
+
+/// Wrap `@content` with horizontal media query.
+///
+/// @author Kris Olszewski
+///
+/// @param {String} $direction - `under`, `between`, `above`
+/// @param {String} $breakpoint--start - Breakpoint alias
+/// @param {String} $breakpoint--end (null) - Breakpoint alias
+///
+/// @example scss - Usage
+///   .element {
+///     @include mq(under, mobile) {
+///       font-size: 20px;
+///     };
+///   }
+///
+///   .element {
+///     @include mq(between, mobile, tablet) {
+///       font-size: 20px;
+///     };
+///   }
+///
+///   .element {
+///     @include mq(above, tablet) {
+///       font-size: 20px;
+///     };
+///   }
+///
+/// @example css - CSS Output
+///   @media screen and (max-width: 399px) {
+///     .element {
+///       font-size: 20px;
+///     }
+///   }
+///
+///   @media screen and (min-width: 400px), screen and (max-width: 799px) {
+///     .element {
+///       font-size: 20px;
+///     }
+///   }
+///
+///   @media screen and (min-width: 800px) {
+///     .element {
+///       font-size: 20px;
+///     }
+///   }
+
+@mixin mq($direction, $breakpoint--start, $breakpoint--end: null) {
+  @if $direction == under {
+    @media
+      screen and (max-width: (map-get($breakpoints--horiztonal, $breakpoint--start) - 1)) {
+      @content;
+    }
+  } @else if $direction == between {
+    @media
+      screen and (min-width: map-get($breakpoints--horiztonal, $breakpoint--start)),
+      screen and (max-width: (map-get($breakpoints--horiztonal, $breakpoint--end) - 1)) {
+      @content;
+    }
+  } @else if $direction == above {
+    @media
+      screen and (min-width: map-get($breakpoints--horiztonal, $breakpoint--start)) {
+      @content;
+    }
+  }  // if/else $direction
+} // mq()
