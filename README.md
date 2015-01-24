@@ -33,7 +33,9 @@ Yoshi.init({
 HTML structure is completely up to you, as long as, you have `data-view` attribute set on main tag.
 
 **With vertical centering**
+
 Set `data-height` attribute on tag with `u-table` class to dynamically set `min-height` to window's height.
+
 ```html
 <main class="Section" data-view="view-name">
   <div class="u-table" data-height>
@@ -48,7 +50,9 @@ Set `data-height` attribute on tag with `u-table` class to dynamically set `min-
 </main>
 
 ```
+
 **Without vertical centering**
+
 ```html
 <main class="Section" data-view="view-name">
   <div class="u-wrapper">
