@@ -1,7 +1,3 @@
-if (typeof jQuery === 'undefined') {
-  throw new Error('Yoshi requires jQuery');
-}
-
 ;(function($, window, document, undefined) {
 
   'use strict';

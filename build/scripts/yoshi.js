@@ -1,6 +1,6 @@
 /**
  * Yoshi v0.0.1
- * Friday, January 23rd, 2015, 10:54:30 PM
+ * Friday, January 23rd, 2015, 11:26:46 PM
  * 
  * 2014 Kris Olszewski | http://www.kolszewski.com/yoshi
  */
@@ -22,10 +22,6 @@
   };
 
 }(jQuery));
-
-if (typeof jQuery === 'undefined') {
-  throw new Error('Yoshi requires jQuery');
-}
 
 ;(function($, window, document, undefined) {
 
