@@ -1,6 +1,6 @@
 /**
  * Yoshi v0.0.1
- * Friday, January 23rd, 2015, 11:35:53 PM
+ * Saturday, January 24th, 2015, 12:14:29 PM
  * 
  * 2014 Kris Olszewski | http://www.kolszewski.com/yoshi
  */
@@ -83,6 +83,19 @@
       this.config.missingView = config.missingView || 'not-found';
     }
 
+    if (config.onBeforeChange && typeof config.onBeforeChange === 'function') {
+      $.subscribe('yoshi.currentView', function(name, view) {
+        view = (typeof view === 'undefined') ? null : view;
+        config.onBeforeChange(view);
+      });
+    }
+
+    if (config.onAfterChange && typeof config.onAfterChange === 'function') {
+      $.subscribe('yoshi.getView', function(name, html, view) {
+        config.onAfterChange(view);
+      });
+    }
+
     this.$win = $(window);
 
   }; // cache()
@@ -125,14 +138,15 @@
 
     var _this   = this;
     var route   = _this.getHash();
-    var section = $('[data-view]:visible').data('view');
+    var view = $('[data-view]:visible').data('view');
 
     if (!route.length) {
       _this.setHash(_this.config.defaultView);
       return;
     }
 
-    if (route !== section) {
+    if (route !== view) {
+      $.publish('yoshi.currentView', view);
       _this.getView(route);
     }
 
