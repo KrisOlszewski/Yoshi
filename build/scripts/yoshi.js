@@ -1,11 +1,17 @@
 /**
  * Yoshi v0.0.1
- * Friday, January 23rd, 2015, 11:26:46 PM
+ * Friday, January 23rd, 2015, 11:35:53 PM
  * 
  * 2014 Kris Olszewski | http://www.kolszewski.com/yoshi
  */
 
-;(function($) {
+/**
+ * Tiny Pub/Sub - v0.7.0 - 2013-01-29
+ * https://github.com/cowboy/jquery-tiny-pubsub
+ * Copyright (c) 2013 "Cowboy" Ben Alman; Licensed MIT
+ */
+
+(function($) {
 
   var o = $({});
 

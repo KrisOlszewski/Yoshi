@@ -1,11 +1,11 @@
 # Yoshi
 Low level single page application using URL hash and Ajax.
 
-[Live Demo](http://www.kolszewski.com/yoshi/)
++ Dependencies: [Velocity.js + UI Pack](http://julian.com/research/velocity/), [jQuery](http://jquery.com/), [jQuery Tiny Pub/Sub](https://github.com/cowboy/jquery-tiny-pubsub)
++ Support: IE8+
++ [Live Demo](http://www.kolszewski.com/yoshi/)
 
 ## Options
-
-[Velocity UI transitions](http://julian.com/research/velocity/#uiPack)
 
 ```javascript
 Yoshi.init({
@@ -19,6 +19,8 @@ Yoshi.init({
   activeNav     : 'is-active' // Navigation active UI state
 });
 ```
+
+You can find all available transitions here: [Velocity.js UI Pack](http://julian.com/research/velocity/#uiPack)
 
 ## Navigation
 
