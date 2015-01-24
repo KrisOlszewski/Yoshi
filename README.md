@@ -1,5 +1,5 @@
 # Yoshi
-Low level single page application using URL hash and Ajax.
+Low-level single page app using URL hash and Ajax. Not MVC, but still cool.
 
 + Dependencies: [Velocity.js + UI Pack](http://julian.com/research/velocity/), [jQuery](http://jquery.com/), [jQuery Tiny Pub/Sub](https://github.com/cowboy/jquery-tiny-pubsub)
 + Support: IE8+

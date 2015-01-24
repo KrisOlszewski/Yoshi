@@ -6,7 +6,7 @@
     "name": "Kris Olszewski",
     "url": "http://www.kolszewski.com/yoshi"
   },
-  "description": "Not MVC, but still cool.",
+  "description": "Low-level single page app using URL hash and Ajax. Not MVC, but still cool.",
   "contributors": [
     {
       "name": "Kris Olszewski",
