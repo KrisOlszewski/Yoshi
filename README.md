@@ -18,10 +18,10 @@ Yoshi.init({
   missingView   : 'not-found', // Missing file view name
   activeNav     : 'is-active', // Navigation active UI state
   onBeforeChange: function(view) {
-    console.log(view); // log view of last content section, 'null' if undefined
+    // old view, 'null' if undefined
   },
   onAfterChange: function(view) {
-    console.log(view); // log view of new content section
+    // new view
   }
 });
 ```
