@@ -1,6 +1,6 @@
 /**
  * Yoshi v0.0.1
- * Friday, January 23rd, 2015, 10:42:53 PM
+ * Friday, January 23rd, 2015, 11:12:45 PM
  * 
  * 2014 Kris Olszewski | http://www.kolszewski.com/yoshi
  */
@@ -304,7 +304,10 @@ a
 {
     position: relative;
     z-index: 5;
+}
 
+.Section[data-view]
+{
     display: none;
 }
 

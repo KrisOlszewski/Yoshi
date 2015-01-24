@@ -6,9 +6,12 @@
  */
 
 .Section {
-  display: none;
   position: relative;
   z-index: 5;
+
+  &[data-view] {
+    display: none;
+  }
 
   .u-table {
     position: relative;
@@ -18,16 +21,4 @@
   .u-cell {
     padding: 100px 0;
   }
-}
-
-.Section--welcome {
-
-}
-
-.Section--general {
-
-}
-
-.Section--notFound {
-
 }
