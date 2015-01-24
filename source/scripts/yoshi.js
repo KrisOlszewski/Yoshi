@@ -97,16 +97,16 @@ if (typeof jQuery === 'undefined') {
   Yoshi.routeManager = function() {
 
     var _this   = this;
-    var hash    = _this.getHash();
+    var route   = _this.getHash();
     var section = $('[data-view]:visible').data('view');
 
-    if (!hash.length) {
+    if (!route.length) {
       _this.setHash(_this.config.defaultView);
       return;
     }
 
-    if (hash !== section) {
-      _this.getView(hash);
+    if (route !== section) {
+      _this.getView(route);
     }
 
   }; // routeManager()

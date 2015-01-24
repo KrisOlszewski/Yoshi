@@ -1,6 +1,6 @@
 /**
  * Yoshi v0.0.1
- * Friday, January 23rd, 2015, 10:42:52 PM
+ * Friday, January 23rd, 2015, 10:54:30 PM
  * 
  * 2014 Kris Olszewski | http://www.kolszewski.com/yoshi
  */
@@ -122,16 +122,16 @@ if (typeof jQuery === 'undefined') {
   Yoshi.routeManager = function() {
 
     var _this   = this;
-    var hash    = _this.getHash();
+    var route   = _this.getHash();
     var section = $('[data-view]:visible').data('view');
 
-    if (!hash.length) {
+    if (!route.length) {
       _this.setHash(_this.config.defaultView);
       return;
     }
 
-    if (hash !== section) {
-      _this.getView(hash);
+    if (route !== section) {
+      _this.getView(route);
     }
 
   }; // routeManager()
