@@ -12,8 +12,8 @@ Yoshi.init({
   container     : 'body', // Element selector where sections will be prepended
   withBang      : true, // '#' vs '#!' for SEO purposes
   pageExt       : '.html', // File extension for view files via Ajax
-  transitionIn  : 'transition.slideDownBigIn', // Velocity UI in transition
-  transitionOut : 'transition.slideUpBigOut', // Velocity UI out transition
+  transitionIn  : 'slideDownBigIn', // Velocity UI in transition
+  transitionOut : 'slideUpBigOut', // Velocity UI out transition
   defaultView   : 'welcome', // Default file view name
   missingView   : 'not-found', // Missing file view name
   activeNav     : 'is-active', // Navigation active UI state
@@ -42,14 +42,14 @@ HTML structure is completely up to you, as long as, you have `data-view` attribu
 
 **With vertical centering**
 
-Set `data-height` attribute on tag with `u-table` class to dynamically set `min-height` to window's height.
+Set `data-height` attribute on tag with `u-table` class to dynamically set `height` to window's height.
 
 ```html
-<main class="Section" data-view="view-name">
+<main class="c-section" data-view="view-name">
   <div class="u-table" data-height>
-    <div class="u-cell">
+    <div class="u-table__cell">
       <div class="u-wrapper">
-        <article class="Article">
+        <article class="c-article">
           <!-- Your content -->
         </article>
       </div>
@@ -62,9 +62,9 @@ Set `data-height` attribute on tag with `u-table` class to dynamically set `min-
 **Without vertical centering**
 
 ```html
-<main class="Section" data-view="view-name">
+<main class="c-section" data-view="view-name">
   <div class="u-wrapper">
-    <article class="Article">
+    <article class="c-article">
       <!-- Your content -->
     </article>
   </div>
