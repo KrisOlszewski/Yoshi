@@ -34,32 +34,24 @@
 
   Yoshi.cache = function(config) {
 
-    config = config || {};
-
-    this.config               = {};
+    this.config               = config || {};
     this.config.container     = config.container || 'body';
     this.config.withBang      = (config.withBang === false) ? false : true;
     this.config.pageExt       = config.pageExt || '.html';
-    this.config.transitionIn  = config.transitionIn || 'transition.slideDownBigIn';
-    this.config.transitionOut = config.transitionOut || 'transition.slideUpBigOut';
+    this.config.transitionIn  = 'transition.' + (config.transitionIn || 'slideDownBigIn');
+    this.config.transitionOut = 'transition.' + (config.transitionOut || 'slideUpBigOut');
     this.config.activeNav     = config.activeNav || 'is-active';
+    this.config.defaultView   = (this.config.withBang ? '!' : '') + (config.defaultView || 'welcome');
+    this.config.missingView   = (this.config.withBang ? '!' : '') + (config.missingView || 'not-found');
 
-    if (this.config.withBang) {
-      this.config.defaultView = '!' + (config.defaultView || 'welcome');
-      this.config.missingView = '!' + (config.missingView || 'not-found');
-    } else {
-      this.config.defaultView = config.defaultView || 'welcome';
-      this.config.missingView = config.missingView || 'not-found';
-    }
-
-    if (config.onBeforeChange && typeof config.onBeforeChange === 'function') {
+    if (typeof config.onBeforeChange === 'function') {
       $.subscribe('yoshi.currentView', function(name, view) {
         view = (typeof view === 'undefined') ? null : view;
         config.onBeforeChange(view);
       });
     }
 
-    if (config.onAfterChange && typeof config.onAfterChange === 'function') {
+    if (typeof config.onAfterChange === 'function') {
       $.subscribe('yoshi.getView', function(name, html, view) {
         config.onAfterChange(view);
       });
@@ -130,7 +122,7 @@
   Yoshi.viewManager = function(html, view) {
 
     var _this    = this;
-    var $section = $('[data-view]:visible');
+    var $section = $('[data-view].is-active');
 
     $(_this.config.container).prepend(html);
     _this.setHeight();
@@ -152,7 +144,7 @@
   Yoshi.animateOut = function(view) {
 
     var _this    = this;
-    var $section = $('[data-view]:visible');
+    var $section = $('[data-view].is-active');
 
     $section.velocity(_this.config.transitionOut, {
       complete: function() {
@@ -171,7 +163,7 @@
   Yoshi.animateIn = function(view) {
 
     var _this    = this;
-    var $section = $('[data-view="' + view + '"]');
+    var $section = $('[data-view="' + view + '"]').addClass('is-active');
 
     $section.velocity(_this.config.transitionIn);
 
@@ -196,7 +188,7 @@
 
   Yoshi.setHeight = function() {
     var winHeight = $(window).height();
-    $('[data-height]').css('min-height', winHeight);
+    $('[data-height]').css('height', winHeight);
   };
 
   /**
