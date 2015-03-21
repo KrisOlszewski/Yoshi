@@ -5,11 +5,11 @@
  * --------------------------------------------------
  */
 
-.Article {
+.c-article {
   position: relative;
 }
 
-.Article-title {
+.c-article__title {
   font-size: 60px;
   line-height: 60px;
   margin: 0 0 30px;
@@ -17,7 +17,7 @@
   color: #967adc;
 }
 
-.Article-subtitle {
+.c-article__subtitle {
   font-size: 30px;
   line-height: 36px;
   margin: 0 0 20px;
@@ -25,14 +25,14 @@
   color: #967adc;
 }
 
-.Article-intro {
+.c-article__intro {
   font-size: 20px;
   line-height: 26px;
   margin: 0 0 20px;
   color: #656d78;
 }
 
-.Article-text {
+.c-article__text {
   font-size: 16px;
   line-height: 22px;
   margin: 0 0 20px;

@@ -17,19 +17,19 @@
 <body>
 
   <!-- Persistent navigation -->
-  <header class="Header" role="banner">
+  <header class="c-header" role="banner">
     <div class="u-wrapper">
-      <a href="#!" class="Logo">Yoshi</a>
-      <nav class="Navigation" role="navigation">
-        <ul class="Navigation-list">
-          <li class="Navigation-item">
-            <a href="#!" data-href="welcome" class="Navigation-link">Welcome</a>
+      <a href="#!" class="c-logo">Yoshi</a>
+      <nav class="c-navigation" role="navigation">
+        <ul class="c-navigation__list">
+          <li class="c-navigation__item">
+            <a href="#!" data-href="welcome" class="c-navigation__link">Welcome</a>
           </li>
-          <li class="Navigation-item">
-            <a href="#!general" data-href="general" class="Navigation-link">General</a>
+          <li class="c-navigation__item">
+            <a href="#!general" data-href="general" class="c-navigation__link">General</a>
           </li>
-          <li class="Navigation-item">
-            <a href="#!broken-link" data-href="broken-link" class="Navigation-link">Missing</a>
+          <li class="c-navigation__item">
+            <a href="#!broken-link" data-href="broken-link" class="c-navigation__link">Missing</a>
           </li>
         </ul>
       </nav>
@@ -50,16 +50,18 @@
       container     : 'body', // Element selector where sections will be prepended
       withBang      : true, // '#' vs '#!' for SEO purposes
       pageExt       : '.html', // File extension for view files via Ajax
-      transitionIn  : 'transition.slideDownBigIn', // Velocity UI in transition
-      transitionOut : 'transition.slideUpBigOut', // Velocity UI out transition
+      transitionIn  : 'slideDownBigIn', // Velocity UI in transition
+      transitionOut : 'slideUpBigOut', // Velocity UI out transition
       defaultView   : 'welcome', // Default file view name
       missingView   : 'not-found', // Missing file view name
       activeNav     : 'is-active', // Navigation active UI state
       onBeforeChange: function(view) {
         // old view, 'null' if undefined
+        // console.log('Old view: ' + view);
       },
       onAfterChange: function(view) {
         // new view
+        // console.log('New view: ' + view);
       }
     });
   </script>

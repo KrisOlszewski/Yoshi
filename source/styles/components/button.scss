@@ -50,7 +50,7 @@ $button-actions: (
 @mixin generate-button-action-modifiers() {
   @each $action, $values in $button-actions {
 
-    .Button--#{$action} {
+    .c-button--#{$action} {
       background-color: get-button-action($action, background);
       border-color: get-button-action($action, border);
       color: get-button-action($action, text);
@@ -70,7 +70,7 @@ $button-actions: (
  * --------------------------------------------------
  */
 
-.Button {
+.c-button {
   background: map-get($button-base, background);
   border: 1px solid map-get($button-base, border);
   border-radius: map-get($button-base, border-radius);

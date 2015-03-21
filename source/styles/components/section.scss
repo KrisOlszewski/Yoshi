@@ -5,7 +5,7 @@
  * --------------------------------------------------
  */
 
-.Section {
+.c-section {
   position: relative;
   z-index: 5;
 
@@ -18,7 +18,7 @@
     z-index: 10;
   }
 
-  .u-cell {
+  .u-table__cell {
     padding: 100px 0;
   }
 }
