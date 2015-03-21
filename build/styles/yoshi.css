@@ -1,6 +1,6 @@
 /**
  * Yoshi v0.0.1
- * Saturday, January 24th, 2015, 12:28:58 PM
+ * Saturday, March 21st, 2015, 10:56:50 AM
  * 
  * 2014 Kris Olszewski | http://www.kolszewski.com/yoshi
  */
@@ -90,7 +90,7 @@ a
     width: 100%;
 }
 
-.u-cell
+.u-table__cell
 {
     display: table-cell;
 
@@ -127,7 +127,7 @@ a
  * --------------------------------------------------
  */
 
-.Button
+.c-button
 {
     font-size: 14px;
     line-height: 20px;
@@ -159,32 +159,32 @@ a
     -webkit-appearance: none;
 }
 
-.Button:hover
+.c-button:hover
 {
     border-color: #ac92ec;
     background-color: #ac92ec;
 }
 
-.Button::-moz-focus-inner
+.c-button::-moz-focus-inner
 {
     margin: 0;
     padding: 0;
 }
 
-.Button:focus
+.c-button:focus
 {
     outline: 0;
 }
 
-.Button:hover,
-.Button:focus,
-.Button:active
+.c-button:hover,
+.c-button:focus,
+.c-button:active
 {
     text-decoration: none;
 }
 
-.Button:disabled,
-.Button.is-disabled
+.c-button:disabled,
+.c-button.is-disabled
 {
     cursor: not-allowed;
     pointer-events: none;
@@ -198,14 +198,14 @@ a
  * --------------------------------------------------
  */
 
-.Button--broken
+.c-button--broken
 {
     color: #fff;
     border-color: #da4453;
     background-color: #da4453;
 }
 
-.Button--broken:hover
+.c-button--broken:hover
 {
     color: #fff;
     border-color: #ed5565;
@@ -217,7 +217,7 @@ a
  * --------------------------------------------------
  */
 
-.Header
+.c-header
 {
     position: fixed;
     z-index: 10;
@@ -235,7 +235,7 @@ a
  * --------------------------------------------------
  */
 
-.Logo
+.c-logo
 {
     font-size: 13px;
     line-height: 20px;
@@ -252,12 +252,12 @@ a
  * --------------------------------------------------
  */
 
-.Navigation
+.c-navigation
 {
     float: right;
 }
 
-.Navigation-list
+.c-navigation__list
 {
     float: left;
 
@@ -267,14 +267,14 @@ a
     list-style: none;
 }
 
-.Navigation-item
+.c-navigation__item
 {
     float: left;
 
     margin-left: 20px;
 }
 
-.Navigation-link
+.c-navigation__link
 {
     font-size: 13px;
     line-height: 20px;
@@ -289,8 +289,8 @@ a
     color: #fff;
 }
 
-.Navigation-link.is-active,
-.Navigation-link:hover
+.c-navigation__link.is-active,
+.c-navigation__link:hover
 {
     box-shadow: 0 1px 0 0 #fff;
 }
@@ -300,24 +300,24 @@ a
  * --------------------------------------------------
  */
 
-.Section
+.c-section
 {
     position: relative;
     z-index: 5;
 }
 
-.Section[data-view]
+.c-section[data-view]
 {
     display: none;
 }
 
-.Section .u-table
+.c-section .u-table
 {
     position: relative;
     z-index: 10;
 }
 
-.Section .u-cell
+.c-section .u-table__cell
 {
     padding: 100px 0;
 }
@@ -327,12 +327,12 @@ a
  * --------------------------------------------------
  */
 
-.Article
+.c-article
 {
     position: relative;
 }
 
-.Article-title
+.c-article__title
 {
     font-size: 60px;
     font-weight: 300;
@@ -343,7 +343,7 @@ a
     color: #967adc;
 }
 
-.Article-subtitle
+.c-article__subtitle
 {
     font-size: 30px;
     font-weight: 300;
@@ -354,7 +354,7 @@ a
     color: #967adc;
 }
 
-.Article-intro
+.c-article__intro
 {
     font-size: 20px;
     line-height: 26px;
@@ -364,7 +364,7 @@ a
     color: #656d78;
 }
 
-.Article-text
+.c-article__text
 {
     font-size: 16px;
     line-height: 22px;
@@ -381,18 +381,18 @@ a
         padding: 0 30px;
     }
 
-    .Logo
+    .c-logo
     {
         font-size: 15px;
         line-height: 20px;
     }
 
-    .Navigation-item
+    .c-navigation__item
     {
         margin-left: 10px;
     }
 
-    .Navigation-link
+    .c-navigation__link
     {
         font-size: 15px;
         line-height: 20px;
